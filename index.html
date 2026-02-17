@@ -375,50 +375,52 @@
 			</div>
 			<div class="row">
 				<form id="contact-form" class="col s12" action="contacto.php" method="POST">
-					<div class="row">
-						<div class="col s12 m4 light teal-text text-darken-3">* Área a consultar:</div>
-						<div class="col s12 m2">
-							<input class="with-gap" name="group" type="radio" id="sales" value="sales" required />
-							<label for="sales" class="light text-darken-4">Ventas</label>
+					<div class="container">
+						<div class="row">
+							<div class="col s12 m4 light teal-text text-darken-3">* Área a consultar:</div>
+							<div class="col s12 m2">
+								<input class="with-gap" name="group" type="radio" id="sales" value="sales" required />
+								<label for="sales" class="light text-darken-4">Ventas</label>
+							</div>
+							<div class="col s12 m3">
+								<input class="with-gap" name="group" type="radio" id="admin" value="admin" />
+								<label for="admin" class="light text-darken-4">Administración</label>
+							</div>
+							<div class="col s12 m2">
+								<input class="with-gap" name="group" type="radio" id="support" value="support" />
+								<label for="support" class="light text-darken-4">Soporte</label>
+							</div>
 						</div>
-						<div class="col s12 m3">
-							<input class="with-gap" name="group" type="radio" id="admin" value="admin" />
-							<label for="admin" class="light text-darken-4">Administración</label>
-						</div>
-						<div class="col s12 m2">
-							<input class="with-gap" name="group" type="radio" id="support" value="support" />
-							<label for="support" class="light text-darken-4">Soporte</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="input-field col s12">
-							<i class="pe-7s-user prefix teal-text text-darken-3"></i>
-							<input id="first-name" type="text" name="firstname" class="validate" required>
-							<label for="first-name" class="light text-darken-4">* Nombre / Empresa</label>
-						</div>
-						<div class="input-field col s12">
-							<i class="pe-7s-mail prefix teal-text text-darken-3"></i>
-							<input id="email" type="email" name="email" class="validate" required>
-							<label for="email" class="light text-darken-4">* Correo electrónico</label>
-						</div>
-						<div class="input-field col s12">
-							<i class="pe-7s-call prefix teal-text text-darken-3"></i>
-							<input id="phone" type="tel" name="phone" class="validate" maxlength="12" pattern="[0-9]{9}" required>
-							<label for="phone" class="light text-darken-4">* Teléfono</label>
-						</div>
-					
-						<div class="input-field col s12">
-							<i class="pe-7s-comment prefix teal-text text-darken-3"></i>
-							<textarea id="comment" name="comment" class="materialize-textarea" data-length="120" maxlength="120" required></textarea>
-							<label for="comment" class="light text-darken-4">* Mensaje</label>
-						</div>
-
-						<div class="g-recaptcha" data-sitekey="6LdXc9IUAAAAAB2RncT45MwqDUfMXCXppk70TTxK"></div>
+						<div class="row">
+							<div class="input-field col s12">
+								<i class="pe-7s-user prefix teal-text text-darken-3"></i>
+								<input id="first-name" type="text" name="firstname" class="validate" required>
+								<label for="first-name" class="light text-darken-4">* Nombre / Empresa</label>
+							</div>
+							<div class="input-field col s12">
+								<i class="pe-7s-mail prefix teal-text text-darken-3"></i>
+								<input id="email" type="email" name="email" class="validate" required>
+								<label for="email" class="light text-darken-4">* Correo electrónico</label>
+							</div>
+							<div class="input-field col s12">
+								<i class="pe-7s-call prefix teal-text text-darken-3"></i>
+								<input id="phone" type="tel" name="phone" class="validate" maxlength="12" pattern="[0-9]{9}" required>
+								<label for="phone" class="light text-darken-4">* Teléfono</label>
+							</div>
 						
-					</div>
-					<div class="row">
-						<div class="right">
-							<button id="send" type="submit" name="enviar" class="btn-floating btn-large waves-effect waves-light amber darken-3 tooltipped data-position="left" data-delay="50" data-tooltip="Enviar"><i class="material-icons left">send</i></button>
+							<div class="input-field col s12">
+								<i class="pe-7s-comment prefix teal-text text-darken-3"></i>
+								<textarea id="comment" name="comment" class="materialize-textarea" data-length="120" maxlength="120" required></textarea>
+								<label for="comment" class="light text-darken-4">* Mensaje</label>
+							</div>
+
+							<div class="g-recaptcha" data-sitekey="6LdXc9IUAAAAAB2RncT45MwqDUfMXCXppk70TTxK"></div>
+							
+						</div>
+						<div class="row">
+							<div class="right">
+								<button id="send" type="submit" name="enviar" class="btn-floating btn-large waves-effect waves-light amber darken-3 tooltipped data-position="left" data-delay="50" data-tooltip="Enviar"><i class="material-icons left">send</i></button>
+							</div>
 						</div>
 					</div>
 				</form>

@@ -30,7 +30,7 @@ section>div{
 		padding-top: 100px;
 }
 
-.brief-description{ font-size: 16px; }
+.brief-description{ font-size: 16px; text-align: center;}
 
 .carousel.carousel-slider.initialized{ max-height: 100vh !important }
 .carousel img{ min-width: 100%; }
