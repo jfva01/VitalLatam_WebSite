@@ -317,6 +317,8 @@ footer p{color: black}
 
 	#applications .card{ height: 240px; }
 
+
+
 }
 
 /* ===== Inicio Navbar ===== */
@@ -387,15 +389,15 @@ ul#menu li a{
 
 /* ===== Inicio FAQ ===== */
 
-body{
-	background-image: url(../images/map-background-faq.jpg);
+#faq-body{
+	background-image: url(..assests/images/map-background-faq.jpg);
 }
 
 h4, p, a, a:link, a:visited{ font-family: 'Montserrat', sans-serif; text-decoration: none !important; }
 
-#header { padding-top: 30px; }
-#header a img { width: 150px; padding-left: 20px }
-#header h4 { padding-left: 25px; font-size: 28px; font-family: 'Montserrat', sans-serif; }
+#faq-header { padding-top: 30px; }
+#faq-header a img { width: 150px; padding-left: 20px }
+#faq-header h4 { padding-left: 25px; font-size: 28px; font-family: 'Montserrat', sans-serif; }
 
 #navigation i{ font-size: 24px }
 #navigation a{ font-family: 'Montserrat', sans-serif; }
@@ -420,8 +422,8 @@ section p{text-align: justify}
 /* EFECTO DE ZOOM EN IMAGEN */
 
 /* Velocidad de efecto */
-.card-image{overflow: hidden;}
-.card-image img {
+#heading .card-image{overflow: hidden;}
+#heading .card-image img {
 -webkit-transition:all 1.9s ease;
 -moz-transition:all 1.9s ease;
 -o-transition:all 1.9s ease;
@@ -429,7 +431,7 @@ section p{text-align: justify}
 width:100%;
 }
 /* Tamaño de la escala */
-.card-image:hover img {
+#heading .card-image:hover img {
 -webkit-transform:scale(1.1);
 -moz-transform:scale(1.1);
 -ms-transform:scale(1.1);
@@ -455,23 +457,20 @@ article span i{ font-size: 24px; }
 
 /* ESCRITORIO MEDIANO (md 1024px en adelante) */
 @media (max-width: 1199px) and (min-width: 992px){
-
 	#intro .card{ height: 500px; }
 	#main-content{margin-top: 20px}
 }
 
 /* ESCRITORIO PEQUEÑO (sm 768px en adelante) */
 @media (max-width: 991px) and (min-width: 768px){
-
 	#main-content{margin-top: 20px}
-
 }
 
 /* ESCRITORIO MOVIL (xs 320px) */
 @media (max-width: 767px){
 
-	#header a img { width: 120px; padding-left: 10px }
-	#header h4 { padding-left: 25px; font-size: 22px; font-family: 'Montserrat', sans-serif; }
+	#faq-header a img { width: 120px; padding-left: 10px }
+	#faq-header h4 { padding-left: 25px; font-size: 22px; font-family: 'Montserrat', sans-serif; }
 	#intro .card-content p{font-size: 12px}
 	#intro .card-image span p{ font-size: 16px;text-align: left; }
 	#intro .card-action a{ font-size: 12px }
@@ -490,14 +489,14 @@ article span i{ font-size: 24px; }
 
 /* ===== Inicio Terms ===== */
 
-body{
+#terms-body{
 	background-image: url(../images/map-background-faq.jpg);
 }
 
-header { margin-top: 30px; }
-header div{ height: 90px }
-header div img{ width: 150px; padding-left: 20px }
-header div h4{ padding-left: 25px; font-size: 28px; font-family: 'Montserrat', sans-serif; }
+#terms-header { margin-top: 30px; }
+#terms-header div{ height: 90px }
+#terms-header div img{ width: 150px; padding-left: 20px }
+#terms-header div h4{ padding-left: 25px; font-size: 28px; font-family: 'Montserrat', sans-serif; }
 
 #navigation i{ font-size: 24px }
 #navigation a{ font-family: 'Montserrat', sans-serif; }
@@ -511,7 +510,7 @@ header div h4{ padding-left: 25px; font-size: 28px; font-family: 'Montserrat', s
 #text-container p span{background-color: yellow}
 
 /* PREVENT USER TO SELECT AND COPY ANYTHING */
-body, html{     
+#terms-body, html{     
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -525,29 +524,20 @@ body, html{
 #terms span{font-size: 18px}
 
 /* ESCRITORIO GRANDE (lg 1366px en adelante) */
-@media (min-width: 1200px){
-	
-
-}
+@media (min-width: 1200px){}
 
 /* ESCRITORIO MEDIANO (md 1024px en adelante) */
-@media (max-width: 1199px) and (min-width: 992px){
-
-}
+@media (max-width: 1199px) and (min-width: 992px){}
 
 /* ESCRITORIO PEQUEÑO (sm 768px en adelante) */
-@media (max-width: 991px) and (min-width: 768px){
-
-}
+@media (max-width: 991px) and (min-width: 768px){}
 
 /* ESCRITORIO MOVIL (xs 320px) */
 @media (max-width: 767px){
 
-    #header a img { width: 120px; padding-left: 10px }
-    #header h4 { padding-left: 25px; font-size: 22px; font-family: 'Montserrat', sans-serif; }
+    #terms-header a img { width: 120px; padding-left: 10px }
+    #terms-header h4 { padding-left: 25px; font-size: 22px; font-family: 'Montserrat', sans-serif; }
     #text-container p{ font-size: 14px; }
-
-
 }
 
 /* ===== Fin Terms ===== */
