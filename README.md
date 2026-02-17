@@ -15,11 +15,17 @@ Materialize CSS
 jQuery (versión 3.2.1)
 
 📂 Estructura del proyecto
+
 /assests/css        → Estilos personalizados
+
 /assests/js         → Scripts personalizados
+
 /assests/images     → Recursos gráficos
+
 /assests/fonts      → Tipografías utilizadas
+
 index.html  → Página principal
+
 faq.html    → Página de preguntas frecuentes
 
 🎯 Características
