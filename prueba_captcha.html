@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+	<form action="#" method="POST" onsubmit="return captcha_fn(this)">
+		<input type="text" name="nombre" placeholder="Nombre...">
+		<input type="text" name="apellido" placeholder="Apellido...">
+		<div class="g-recaptcha" data-sitekey="6Lf52YwUAAAAAPACSQMBlw_bzQQA4Vj2VNY4RMv3" data-callback="enabledSubmit"></div>
+		<input type="submit" name="enviar" placeholder="ENVIAR">
+	</form>
+
+	<script>
+		function captcha_fnc(a) {
+			var response = grecaptcha.getResponse();
+
+		    if(response.length == 0){
+		        alert("Captcha no verificado");
+		        return false;
+		      	event.preventDefault();
+		    } else {
+		      alert("Captcha verificado");
+		      return true;
+		      window.location.href = 'http://www.vitalgps.la';
+		    }
+		}
+	</script>
+</body>
+</html>
