@@ -52,6 +52,10 @@ Optimización de estructura CSS
 
 Modularización avanzada del JavaScript
 
+## 📷 Vista previa
+
+![Vista previa del proyecto](assets/preview.png)
+
 👨‍💻 Autor
 
 Jorge Vargas
