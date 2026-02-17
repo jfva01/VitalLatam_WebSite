@@ -9,7 +9,7 @@ Proyecto web desarrollado utilizando **HTML5, CSS3 y JavaScript**, con enfoque e
 ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 
 ## 🌍 Demo en vivo
-[![Live Demo](https://img.shields.io/badge/Demo-Online-success?style=for-the-badge)](https://tulink.github.io/tu-repo/](https://jfva01.github.io/VitalLatam_WebSite/index.html))
+[![Live Demo](https://img.shields.io/badge/Demo-Online-success?style=for-the-badge)](https://jfva01.github.io/VitalLatam_WebSite)
 
 ---
 
