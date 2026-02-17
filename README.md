@@ -1,59 +1,72 @@
-<h2>🌐 Web Project – Sitio Corporativo</h2>
+## 🌐 Web Project – Sitio Corporativo
 
-<p>Proyecto web desarrollado utilizando HTML5, CSS3 y JavaScript, con enfoque en diseño responsivo y experiencia de usuario.</p>
+Proyecto web desarrollado utilizando **HTML5, CSS3 y JavaScript**, con enfoque en diseño responsivo y experiencia de usuario.
 
-<h3>## 🌍 Demo en vivo</h3>
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Materialize](https://img.shields.io/badge/Materialize-EE6E73?style=for-the-badge)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 
-<p>
-  <a href="https://jfva01.github.io/VitalLatam_WebSite/index.html" target="_blank">
-    🔗 Ver sitio desplegado
-  </a>
-</p>
+## 🌍 Demo en vivo
+[![Live Demo](https://img.shields.io/badge/Demo-Online-success?style=for-the-badge)](https://tulink.github.io/tu-repo/](https://jfva01.github.io/VitalLatam_WebSite/index.html))
 
-<h3>## 📷 Vista previa</h3>
+---
+
+## 📷 Vista previa
 
 <p align="center">
-  <img src="/assets/preview1.png" width="800"/>
+  <img src="assets/preview1.png" width="800"/>
 </p>
 
-<h3>🚀 Tecnologías utilizadas</h3>
-<ul>
-  <li>HTML5</li>
-  <li>CSS3</li>
-  <li>JavaScript (Vanilla JS)</li>
-  <li>Materialize CSS</li>
-  <li>jQuery (versión 3.2.1)</li>
-</ul>
+---
 
-<h3>📂 Estructura del proyecto</h3>
+## 🚀 Tecnologías utilizadas
 
-/assests/css        → Estilos personalizados</br>
-/assests/js         → Scripts personalizados</br>
-/assests/images     → Recursos gráficos</br>
-/assests/fonts      → Tipografías utilizadas</br>
-index.html  → Página principal</br>
-faq.html    → Página de preguntas frecuentes</br>
+- HTML5  
+- CSS3  
+- JavaScript (Vanilla JS)  
+- Materialize CSS  
+- jQuery 3.2.1  
 
-<h3>🎯 Características</h3>
-<ul>
-  <li>Diseño responsivo</li>
-  <li>Navegación dinámica</li>
-  <li>Componentes interactivos</li>
-  <li>Organización modular de estilos y scripts</li>
-</ul>
+---
 
-<h3>🧠 Objetivo del proyecto</h3>
+## 📂 Estructura del proyecto
+```
+/assets
+   /css
+   /js
+   /images
+   /fonts
+index.html
+faq.html
+```
+---
 
-<p>Este proyecto fue desarrollado como práctica de desarrollo frontend tradicional, aplicando principios de maquetación, separación de responsabilidades y manipulación del DOM.</p>
+## 🎯 Características
 
-<h3>📌 Mejoras futuras</h3>
-<ul>
-  <li>Migración a React + TypeScript</li>
-  <li>Eliminación de dependencias legacy</li>
-  <li>Optimización de estructura CSS</li>
-  <li>Modularización avanzada del JavaScript</li>
-</ul>
+- Diseño responsivo  
+- Navegación dinámica  
+- Componentes interactivos  
+- Organización modular de estilos y scripts  
 
-<h3>👨‍💻 Autor</h3>
+---
 
-<p>Jorge Vargas</p>
+## 🧠 Objetivo del proyecto
+
+Este proyecto fue desarrollado como práctica de desarrollo frontend tradicional, aplicando principios de maquetación, separación de responsabilidades y manipulación del DOM.
+
+---
+
+## 📌 Mejoras futuras
+
+- Migración a React + TypeScript  
+- Eliminación de dependencias legacy  
+- Optimización de estructura CSS  
+- Modularización avanzada del JavaScript  
+
+---
+
+## 👨‍💻 Autor
+
+**Jorge Vargas**
