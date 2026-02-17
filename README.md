@@ -1,63 +1,59 @@
-🌐 Web Project – Sitio Corporativo
+<h2>🌐 Web Project – Sitio Corporativo</h2>
 
-Proyecto web desarrollado utilizando HTML5, CSS3 y JavaScript, con enfoque en diseño responsivo y experiencia de usuario.
+<p>Proyecto web desarrollado utilizando HTML5, CSS3 y JavaScript, con enfoque en diseño responsivo y experiencia de usuario.</p>
 
-🚀 Tecnologías utilizadas
+<h3>## 🌍 Demo en vivo</h3>
 
-HTML5
+<p>
+  <a href="https://jfva01.github.io/VitalLatam_WebSite/index.html" target="_blank">
+    🔗 Ver sitio desplegado
+  </a>
+</p>
 
-CSS3
-
-JavaScript (Vanilla JS)
-
-Materialize CSS
-
-jQuery (versión 3.2.1)
-
-📂 Estructura del proyecto
-
-/assests/css        → Estilos personalizados
-
-/assests/js         → Scripts personalizados
-
-/assests/images     → Recursos gráficos
-
-/assests/fonts      → Tipografías utilizadas
-
-index.html  → Página principal
-
-faq.html    → Página de preguntas frecuentes
-
-🎯 Características
-
-Diseño responsivo
-
-Navegación dinámica
-
-Componentes interactivos
-
-Organización modular de estilos y scripts
-
-🧠 Objetivo del proyecto
-
-Este proyecto fue desarrollado como práctica de desarrollo frontend tradicional, aplicando principios de maquetación, separación de responsabilidades y manipulación del DOM.
-
-📌 Mejoras futuras
-
-Migración a React + TypeScript
-
-Eliminación de dependencias legacy
-
-Optimización de estructura CSS
-
-Modularización avanzada del JavaScript
-
-## 📷 Vista previa
+<h3>## 📷 Vista previa</h3>
 
 <p align="center">
   <img src="/assets/preview1.png" width="800"/>
 </p>
 
-👨‍💻 Autor
+<h3>🚀 Tecnologías utilizadas</h3>
+<ul>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>JavaScript (Vanilla JS)</li>
+  <li>Materialize CSS</li>
+  <li>jQuery (versión 3.2.1)</li>
+</ul>
 
-Jorge Vargas
+<h3>📂 Estructura del proyecto</h3>
+
+/assests/css        → Estilos personalizados</br>
+/assests/js         → Scripts personalizados</br>
+/assests/images     → Recursos gráficos</br>
+/assests/fonts      → Tipografías utilizadas</br>
+index.html  → Página principal</br>
+faq.html    → Página de preguntas frecuentes</br>
+
+<h3>🎯 Características</h3>
+<ul>
+  <li>Diseño responsivo</li>
+  <li>Navegación dinámica</li>
+  <li>Componentes interactivos</li>
+  <li>Organización modular de estilos y scripts</li>
+</ul>
+
+<h3>🧠 Objetivo del proyecto</h3>
+
+<p>Este proyecto fue desarrollado como práctica de desarrollo frontend tradicional, aplicando principios de maquetación, separación de responsabilidades y manipulación del DOM.</p>
+
+<h3>📌 Mejoras futuras</h3>
+<ul>
+  <li>Migración a React + TypeScript</li>
+  <li>Eliminación de dependencias legacy</li>
+  <li>Optimización de estructura CSS</li>
+  <li>Modularización avanzada del JavaScript</li>
+</ul>
+
+<h3>👨‍💻 Autor</h3>
+
+<p>Jorge Vargas</p>
