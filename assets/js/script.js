@@ -22,12 +22,12 @@ $(document).ready(function(){
     if ($("#navbar").length > 0){
 
         /* PAGE SCROLLING */
-        var menu = $('#navbar');
-        var contenedor = $('#menu-contenedor');
-        var list = $('#list');
-        var menu_offset = menu.offset();
-        var link = $('.valign-wrapper');
-        var button = $('.button-collapse');
+        const menu = $('#navbar');
+        const contenedor = $('#menu-contenedor');
+        const list = $('#list');
+        let menu_offset = menu.offset();
+        const link = $('.valign-wrapper');
+        const button = $('.button-collapse');
 
         //Menu on scroll fixed
         $(window).on('scroll',function(){
@@ -83,11 +83,11 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  var menu = $('#menu');
-  var contenedor = $('#menu-contenedor');
-  var list = $('#list');
+  const menu = $('#menu');
+  const contenedor = $('#menu-contenedor');
+  const list = $('#list');
     // Comprueba que el elemento exista y guarda solo la propiedad `top`.
-    var menu_offset = (menu.length && menu.offset()) ? menu.offset().top : null;
+    let menu_offset = (menu.length && menu.offset()) ? menu.offset().top : null;
 
     // Recalcular offset si la ventana cambia de tamaño (responsive)
     $(window).on('resize', function(){
