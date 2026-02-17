@@ -54,7 +54,9 @@ Modularización avanzada del JavaScript
 
 ## 📷 Vista previa
 
-![Vista previa del proyecto](assets/preview.png)
+<p align="center">
+  <img src="/assets/preview1.png" width="800"/>
+</p>
 
 👨‍💻 Autor
 
