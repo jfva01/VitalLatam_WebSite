@@ -1,7 +1,7 @@
 *{ margin:0; padding:0;}
 
 .absolute{ position: absolute; top: 0px; right: 0; left: 0;	z-index: 20; }
-.fixed{	position: fixed; top: 0; width: 100%; animation: smoothScroll 1s forwards; }
+.fixed{	position: fixed; top: 0; width: 100%; box-shadow: 0 2px 10px 0 rgba(0,0,0,.10) !important; animation: smoothScroll 0.5s forwards; z-index: 1000;}
 
 @keyframes smoothScroll {
 	0% {
@@ -12,7 +12,15 @@
 	}
 }
 
-nav{ box-shadow: none !important; }
+nav{
+	box-shadow: none !important;
+	/* Transiciones suaves para el cambio de fondo, sombra y color */
+	transition: background-color .25s ease, box-shadow .25s ease, color .15s ease;
+	-webkit-transition: background-color .25s ease, box-shadow .25s ease, color .15s ease;
+}
+/* Estados para alternar entre transparente y blanco (usados en JS) */
+nav.transparent{ background-color: transparent; }
+nav.white{ background-color: #ffffff; }
 nav ul{ -webkit-transition: all 0.5s ease; -moz-transition: position 10s; -ms-transition: position 10s; -o-transition: position 10s; transition: all 0.5s ease; font-family: 'Montserrat', sans-serif; }
 nav ul li a{ cursor: pointer; color: black; }
 nav ul li a:hover{ background: transparent; }
@@ -41,15 +49,15 @@ section>div{
 #whoarewe p{ text-align: center; font-size: 16px; line-height: 20px; margin: 30px; }
 #whoarewe h4, #cross-platform h4, #services h4, #variety h4, #advantages h4, #applications h4, #contact h4{font-size: 28px}
 
-#services .card p{ font-size: 14px; }
+#services .card p{ font-size: clamp(12px, 1vw, 14px); word-break: break-word; }
 #services .card i{ margin-top: 20px; }
 #services .card{ height: 365px;	border-radius: 15px; box-shadow: 0px 0px 20px -2px rgba(150,150,150,.2); -webkit-transition: all .5s ease; transition: all .5s ease; }
 #services .card:hover{ box-shadow: 0px 0px 20px -2px rgba(48,48,48,.2); margin-top: -1px; }
 
 #variety>div{ padding-top: 30px; padding-bottom: 10px; }
 #variety .card-title{font-size: 18px; }
-#variety .card p{font-size: 14px;}
-#variety .card { height: 365px;	box-shadow: 0px 0px 20px -2px rgba(150,150,150,.5);	-webkit-transition: all .5s ease; transition: all .5s ease; }
+#variety .card p{ font-size: clamp(12px, 1vw, 14px); word-break: break-word;}
+#variety .card { height: 365px;	box-shadow: 0px 0px 20px -2px rgba(150,150,150,.5); -webkit-transition: all .5s ease; transition: all .5s ease; }
 #variety .card:hover{ box-shadow: 0px 0px 20px -2px rgba(48,48,48,.5); }
 
 #advantages h4 { margin-bottom: 20px; }
@@ -57,10 +65,10 @@ section>div{
 #advantages h5, #applications h5{font-size: 22px}
 #advantages>div{ padding-top: 20px; padding-bottom: 30px; }
 #advantages h2 i{ margin-top: 20px; }
-#advantages .card{ height: 220px; box-shadow: none; border: 1px solid rgba(173,181,189,1); text-align: left; box-shadow: 0px 0px 20px -2px rgba(150,150,150,.2); -webkit-transition: all .5s ease; transition: all .5s ease;}
+#advantages .card{ height: clamp(260px,1vw,220px); box-shadow: none; border: 1px solid rgba(173,181,189,1); text-align: left; box-shadow: 0px 0px 20px -2px rgba(150,150,150,.2); -webkit-transition: all .5s ease; transition: all .5s ease;}
 #advantages div.section {height:80% !important}
 #advantages img{width: 130px}
-#advantages p{font-size: 14px}
+#advantages p{ font-size: clamp(12px, 1vw, 14px); word-break: break-word; }
 
 #applications>div{ padding-top: 30px; padding-bottom: 10px; }
 #applications .card{ height: 220px;	border-radius: 10px; box-shadow: none; border: 1px solid rgba(100,100,100,1); -webkit-transition: all .4s ease; transition: all .4s ease; }
@@ -417,7 +425,7 @@ h4, p, a, a:link, a:visited{ font-family: 'Montserrat', sans-serif; text-decorat
 .blogPost .log{font-size: 16px}
 .blogPost .answer{padding-top: 10px; font-size: 14px}
 
-section p{text-align: justify}
+/*section p{text-align: justify}*/
 
 /* EFECTO DE ZOOM EN IMAGEN */
 

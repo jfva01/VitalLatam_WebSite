@@ -86,18 +86,33 @@ $(document).ready(function(){
   var menu = $('#menu');
   var contenedor = $('#menu-contenedor');
   var list = $('#list');
-  var menu_offset = menu.offset();
+    // Comprueba que el elemento exista y guarda solo la propiedad `top`.
+    var menu_offset = (menu.length && menu.offset()) ? menu.offset().top : null;
 
-  	// Cada vez que se haga scroll en la página haremos un chequeo del estado del menú 
-  	//y lo vamos a alternar entre 'fixed' y 'static'.
+    // Recalcular offset si la ventana cambia de tamaño (responsive)
+    $(window).on('resize', function(){
+        if(menu.length && menu.offset()){
+            menu_offset = menu.offset().top;
+        }
+    });
 
-  	$(window).on('scroll',function(){
-  		if($(window).scrollTop()>menu_offset.top){
-  			menu.addClass('menu-fijo');
-        list.addClass('lista-centro');
-  		}else{
-  			menu.removeClass('menu-fijo');
-        list.removeClass('lista-centro');
-  		}
-  	});
+    // Si no existe el elemento no attachamos el manejador de scroll
+    if(menu.length){
+        // Cada vez que se haga scroll en la página haremos un chequeo del estado del menú
+        $(window).on('scroll',function(){
+            // Aseguramos que menu_offset tenga un valor numérico antes de comparar
+            if(menu_offset === null){
+                if(menu.offset()) menu_offset = menu.offset().top;
+                else return; // nada que hacer si sigue sin offset
+            }
+
+            if($(window).scrollTop() > menu_offset){
+                menu.addClass('menu-fijo');
+                list.addClass('lista-centro');
+            } else {
+                menu.removeClass('menu-fijo');
+                list.removeClass('lista-centro');
+            }
+        });
+    }
 });
