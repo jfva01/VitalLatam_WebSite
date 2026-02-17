@@ -421,22 +421,37 @@ section p{text-align: justify}
 
 /* EFECTO DE ZOOM EN IMAGEN */
 
-/* Velocidad de efecto */
-#heading .card-image{overflow: hidden;}
+/* Contenedor: evita que la imagen sobresalga */
+#heading .card-image{ overflow: hidden; }
+
+/* Imagen: uso de transform (hardware-accelerated) y will-change para mejor rendimiento */
 #heading .card-image img {
--webkit-transition:all 1.9s ease;
--moz-transition:all 1.9s ease;
--o-transition:all 1.9s ease;
--ms-transition:all 1.9s ease;
-width:100%;
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	transform-origin: center center;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	will-change: transform;
+	/* Transicionar solo transform (y filter si se usa) para mejor rendimiento */
+	transition: transform .6s cubic-bezier(.2,.8,.2,1), filter .6s cubic-bezier(.2,.8,.2,1);
 }
-/* Tamaño de la escala */
-#heading .card-image:hover img {
--webkit-transform:scale(1.1);
--moz-transform:scale(1.1);
--ms-transform:scale(1.1);
--o-transform:scale(1.1);
-transform:scale(1.1);
+
+/* Estado hover/focus: escala moderada y ligero ajuste de brillo */
+#heading .card-image:hover img,
+#heading .card-image:focus img {
+	transform: scale(1.08);
+	-webkit-transform: scale(1.08);
+	filter: brightness(1.03);
+}
+
+/* Para dispositivos táctiles sin hover: aplicar efecto en :active para que sea usable */
+@media (hover: none) {
+	#heading .card-image:active img {
+		transform: scale(1.04);
+		-webkit-transform: scale(1.04);
+	}
 }
 
 aside ul li i{ font-size: 24px; }
