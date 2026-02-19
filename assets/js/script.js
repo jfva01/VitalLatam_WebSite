@@ -1,118 +1,96 @@
+document.addEventListener("DOMContentLoaded", function () {
 
-$(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    //$('.modal').modal();
-    //$('#modal1').modal('open');
-	$(".button-collapse").sideNav({closeOnClick: true});
-    $('.carousel.carousel-slider').carousel({fullWidth: true, indicators: true},setTimeout(autoplay, 4500));
-	$('.parallax').parallax();
-    $('.scrollspy').scrollSpy();
-	$('a.scroll').click(function(e){
-		e.preventDefault();
-	   $('html, body').stop().animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
-	});    
+    /* === MATERIALIZE INIT === */
 
-    function autoplay() {
-        $('.carousel').carousel('next');
-        setTimeout(autoplay, 4500);
+    const sidenav = document.querySelectorAll(".sidenav");
+    M.Sidenav.init(sidenav, { closeOnClick: true });
+
+    const parallax = document.querySelectorAll(".parallax");
+    M.Parallax.init(parallax);
+
+    const scrollspy = document.querySelectorAll(".scrollspy");
+    M.ScrollSpy.init(scrollspy);
+
+    const tooltips = document.querySelectorAll(".tooltipped");
+    M.Tooltip.init(tooltips, { enterDelay: 50 });
+
+    const counters = document.querySelectorAll("input#input_text, textarea#textarea1");
+    M.CharacterCounter.init(counters);
+
+    /* === CAROUSEL AUTOPLAY ===*/
+
+    const elems = document.querySelectorAll('.carousel');
+    const instances = M.Carousel.init(elems, {
+        fullWidth: true,
+        indicators: true
+    });
+
+    setInterval(function() {
+        const instance = M.Carousel.getInstance(elems[0]);
+        instance.next();
+    }, 4500);
+
+    /* === SMOOTH SCROLL === */
+
+    document.querySelectorAll("a.scroll").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+    /* === NAVBAR FIXED ON SCROLL === */
+
+    const navbar = document.getElementById("navbar");
+    const list = document.getElementById("list");
+    const button = document.querySelector(".button-collapse");
+    const link = document.querySelectorAll(".valign-wrapper");
+
+    if (navbar) {
+        const menuOffset = navbar.offsetTop;
+
+        window.addEventListener("scroll", function () {
+
+        if (window.scrollY > menuOffset) {
+            navbar.classList.add("fixed", "white", "z-depth-1");
+            navbar.classList.remove("transparent", "z-depth-0");
+
+            link.forEach(el => el.classList.add("blue-grey-text", "text-darken-1"));
+            if (button) button.classList.add("teal-text");
+            if (list) list.classList.add("menuscroll");
+
+        } else {
+            navbar.classList.remove("fixed", "white", "z-depth-1");
+            navbar.classList.add("transparent", "z-depth-0");
+
+            link.forEach(el => el.classList.remove("blue-grey-text", "text-darken-1"));
+            if (button) button.classList.remove("teal-text");
+            if (list) list.classList.remove("menuscroll");
+        }
+        });
     }
 
-	$('input#input_text, textarea#textarea1').characterCounter();
+    /* === SCROLL UP BUTTON === */
+    const scrollUp = document.querySelector(".scrollup");
 
-    if ($("#navbar").length > 0){
+    if (scrollUp) {
 
-        /* PAGE SCROLLING */
-        const menu = $('#navbar');
-        const contenedor = $('#menu-contenedor');
-        const list = $('#list');
-        let menu_offset = menu.offset();
-        const link = $('.valign-wrapper');
-        const button = $('.button-collapse');
-
-        //Menu on scroll fixed
-        $(window).on('scroll',function(){
-            if($(window).scrollTop()>menu_offset.top){
-                menu.addClass('fixed');
-                menu.addClass('white');
-                menu.removeClass('transparent');
-                menu.removeClass('z-depth-0');
-                menu.addClass('z-depth-1');
-                link.addClass('blue-grey-text text-darken-1');
-                button.addClass('teal-text');
-                list.addClass('menuscroll');
-            }else{
-                menu.removeClass('fixed');
-                menu.removeClass('white');
-                link.removeClass('blue-grey-text text-darken-1');
-                menu.addClass('transparent');
-                menu.removeClass('z-depth-1');
-                menu.addClass('z-depth-0');
-                button.removeClass('teal-text');
-                list.removeClass('menuscroll');
-            }
-
+        window.addEventListener("scroll", function () {
+        scrollUp.style.display = window.scrollY > 100 ? "block" : "none";
         });
-    
-    };
 
-    $('.tooltipped').tooltip({delay: 50});
-
-});
-
-$(document).ready(function(){
-    $('a.scroll').click(function(e){
+        scrollUp.addEventListener("click", function (e) {
         e.preventDefault();
-        $('html, body').stop().animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
-    });
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.scrollup').fadeIn();
-        } else {
-            $('.scrollup').fadeOut();
-        }
-    });
-
-    $('.scrollup').click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 600);
-        return false;
-    });
-
-});
-
-$(document).ready(function(){
-  const menu = $('#menu');
-  const contenedor = $('#menu-contenedor');
-  const list = $('#list');
-    // Comprueba que el elemento exista y guarda solo la propiedad `top`.
-    let menu_offset = (menu.length && menu.offset()) ? menu.offset().top : null;
-
-    // Recalcular offset si la ventana cambia de tamaño (responsive)
-    $(window).on('resize', function(){
-        if(menu.length && menu.offset()){
-            menu_offset = menu.offset().top;
-        }
-    });
-
-    // Si no existe el elemento no attachamos el manejador de scroll
-    if(menu.length){
-        // Cada vez que se haga scroll en la página haremos un chequeo del estado del menú
-        $(window).on('scroll',function(){
-            // Aseguramos que menu_offset tenga un valor numérico antes de comparar
-            if(menu_offset === null){
-                if(menu.offset()) menu_offset = menu.offset().top;
-                else return; // nada que hacer si sigue sin offset
-            }
-
-            if($(window).scrollTop() > menu_offset){
-                menu.addClass('menu-fijo');
-                list.addClass('lista-centro');
-            } else {
-                menu.removeClass('menu-fijo');
-                list.removeClass('lista-centro');
-            }
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
         });
     }
 });

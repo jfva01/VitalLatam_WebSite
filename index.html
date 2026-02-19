@@ -10,16 +10,18 @@
 	<!-- End Google Tag Manager -->
 
 	<meta name="description" content="Productos y servicios para rastreo y seguimiento mediante dispositivos GSM/GPS con tecnología de cambio inteligente de múltiples redes. Equipos GPS para vehículos, motos, camiones, furgones, buses, seguridad, niños, personas de la tercera edad.">
-	<meta name="robots" content="Index, NoFollow"
-	<meta http-equiv="content-type" content="text-html"; charset="utf-8">
+	<meta name="robots" content="Index, NoFollow">
+	<meta charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css" media="screen,projection">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css" media="screen,projection"> -->
+	<!-- Materialize CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css" media="screen,projection">
 	<link rel="stylesheet" type="text/css" href="assets/css/pe-icon-7-stroke/css/pe-icon-7-stroke.css" media="screen,projection">
 	<link rel="stylesheet" type="text/css" href="assets/css/pe-icon-7-stroke/css/helper.css" media="screen,projection">
-	<link rel="shortcut icon" href="assets/images/vitalgps_icon.ico" type="image/x-icon" >
+	<link rel="shortcut icon" href="assets/images/vitalgps_icon.ico" type="image/x-icon">
 	<title>Seguimiento y rastreo en línea :: Vital Latam </title>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,7 +46,7 @@
 	<div id="menu-contenedor" class="nav-wrapper absolute">
 		<nav id="navbar" class="transparent z-depth-0" role="navigation">
 			<a href="#" class="brand-logo hide-on-med-and-down"><img id="main-logo" src="assets/images/LOGO-VITAL-LATAM_sin_fondo.png" alt="logo Vital Latam"></a>
-			<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons left">menu</i><img class="logo-small" src="assets/images/LOGO-VITAL-LATAM_sin_fondo.png" alt="logo Vital Latam"></a>
+			<a href="#" class="sidenav-trigger" data-target="mobile-demo"><i class="material-icons left">menu</i><img class="logo-small" src="assets/images/LOGO-VITAL-LATAM_sin_fondo.png" alt="logo Vital Latam"></a>
 			<ul id="list" class="right hide-on-med-and-down">
 				<!--<li><a href="webpay.html" class="valign-wrapper"><i class="material-icons left">monetization_on</i>PAGO ONLINE</a></li>-->
 				<li><a href="#whoarewe" class="scroll valign-wrapper"><i class="pe-7s-id left"></i>QUIENES SOMOS</a></li>
@@ -56,7 +58,7 @@
 		</nav>
 	</div>
 
-	<ul class="side-nav" id="mobile-nav">
+	<ul class="sidenav" id="mobile-demo">
 		<li><a href="#" class="sidenav-close"><i class="pe-7s-close"></i></a></li>
 		<!--<li><a href="webpay.html" class=""><i class="material-icons left">monetization_on</i>PAGO ONLINE</a></li>-->
 		<li><a href="#whoarewe" class="scroll"><i class="pe-7s-id left"></i>QUIENES SOMOS</a></li>
@@ -67,7 +69,7 @@
   	</ul>
 
 	<section id="header">
-		<div class="carousel carousel-slider center" data-indicators="true">
+		<div class="carousel carousel-slider center">
 		    <a class="carousel-item" href="">
 	    		<img class="responsive-img" src="assets/images/truckhighway01.jpg" alt="truck" />
 	    		<div id="item1" class="carousel-fixed-item">
@@ -348,8 +350,14 @@
 									<div class="card-content">
 										<span class="card-title"><h5>Puede descargar nuestras Apps</h5></span>
 										<p>Descarga la aplicación para tu dispositivo móvil a través de los siguientes enlaces.</p>
-										<a href="#" target="blank"><img src="assets/images/google-play.png" alt="vitalgps android"></a>
-										<a href="#" target="blank"><img src="assets/images/app-store.png" alt="vitalgps ios"></a>
+										<div class="row">
+											<div class="col s6">
+												<a href="#" target="blank"><img src="assets/images/google-play.png" alt="vitalgps android"></a>
+											</div>
+											<div class="col s6">
+												<a href="#" target="blank"><img src="assets/images/app-store.png" alt="vitalgps ios"></a>
+											</div>
+										</div>
 									</div>
 								</div>	
 							</div>
@@ -378,17 +386,23 @@
 					<div class="container">
 						<div class="row">
 							<div class="col s12 m4 light teal-text text-darken-3">* Área a consultar:</div>
-							<div class="col s12 m2">
-								<input class="with-gap" name="group" type="radio" id="sales" value="sales" required />
-								<label for="sales" class="light text-darken-4">Ventas</label>
+							<div class="col s6 m2">
+								<label>
+									<input name="group1" type="radio" id="sales" value="sales" required />
+									<span>Ventas</span>
+								</label>
 							</div>
-							<div class="col s12 m3">
-								<input class="with-gap" name="group" type="radio" id="admin" value="admin" />
-								<label for="admin" class="light text-darken-4">Administración</label>
+							<div class="col s6 m4">
+								<label>
+									<input name="group1" type="radio" id="admin" value="admin" />
+									<span>Administración</span>
+								</label>
 							</div>
 							<div class="col s12 m2">
-								<input class="with-gap" name="group" type="radio" id="support" value="support" />
-								<label for="support" class="light text-darken-4">Soporte</label>
+								<label>
+									<input name="group1" type="radio" id="support" value="support"  />
+									<span>Soporte</span>
+								</label>
 							</div>
 						</div>
 						<div class="row">
@@ -419,7 +433,9 @@
 						</div>
 						<div class="row">
 							<div class="right">
-								<button id="send" type="submit" name="enviar" class="btn-floating btn-large waves-effect waves-light amber darken-3 tooltipped data-position="left" data-delay="50" data-tooltip="Enviar"><i class="material-icons left">send</i></button>
+								<button id="send" type="submit" name="enviar" class="btn-floating btn-large waves-effect waves-light amber darken-3 tooltipped" data-position="left" data-tooltip="Enviar">
+									<i class="material-icons left">send</i>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -441,7 +457,7 @@
 				<div id="contacto" class="col s12 m4">
 					<h5 class="black-text">Contáctenos</h5>
 					<p class="teal-text text-darken-3 valign-wrapper"><i class="pe-7s-call left"></i>+56 2 2525 2525</p>
-					<p class="teal-text text-darken-3 valign-wrapper"><i class="pe-7s-mail left"></i>info@vitalgps.la<p>
+					<p class="teal-text text-darken-3 valign-wrapper"><i class="pe-7s-mail left"></i>info@vitalgps.la</p>
 					<p class="teal-text text-darken-3 valign-wrapper"><i class="pe-7s-map-2 left"></i>Santiago, Región Metropolitana, Chile.</p>
 					<p class="teal-text text-darken-3 valign-wrapper"><i class="pe-7s-clock left"></i>Lunes a Viernes 09:30 a 18:00</p>
 				</div>
@@ -455,14 +471,16 @@
 	</footer>
 
 	<!-- Modal Structure -->
-	<div id="modal1" class="modal fade">  
+	<div id="modal1" class="modal">  
 		<div class="modal-content">
 	    	<img class="responsive-img" src="assets/images/Popup-Website-Promo-1Mes-Gratis.png" alt="promocion un mes gratis" />
 	  	</div>
 	</div> 
 
-	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/js/materialize.min.js"></script> -->
+	<!-- Materialize JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
